@@ -22,7 +22,7 @@ const allDishesCount = categories?.reduce((acc, category) => acc + category.coun
           <p className="text-xs bg-black text-white rounded-full px-2 py-0.5 flex items-center font-semibold leading-4x">{allDishesCount}</p>
         </div>
 
-        {categories.map((category, index) => (
+       {categories?.map((category, index) => (
           <div key={index} className="flex gap-2 px-4 py-2 border rounded-full">
             <p className="text-sm font-medium">{category.categoryName}</p>
             <p className="text-xs bg-black text-white rounded-full px-2.5 py-0.5 flex items-center font-semibold leading-4x">{category.count}</p>
