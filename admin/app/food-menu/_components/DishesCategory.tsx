@@ -11,7 +11,7 @@ export const DishesCategory = () => {
   if (isLoading) return <DishesCategorySkeleton />;
 
 
-  const allDishesCount = categories.reduce((acc, category) => acc + category.count, 0);
+const allDishesCount = categories?.reduce((acc, category) => acc + category.count, 0) ?? 0;
 
   return (
     <div className="flex flex-col gap-4 p-6 bg-background rounded-xl">
