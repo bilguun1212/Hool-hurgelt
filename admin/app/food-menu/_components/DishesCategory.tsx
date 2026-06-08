@@ -9,7 +9,7 @@ export const DishesCategory = () => {
   const { data: categories, isLoading } = useSWR<CategoryWithCount[]>("categories-with-count", fetchCategoriesWithCount);
 
   if (isLoading) return <DishesCategorySkeleton />;
-  if (!categories?.length) return null;
+
 
   const allDishesCount = categories.reduce((acc, category) => acc + category.count, 0);
 
